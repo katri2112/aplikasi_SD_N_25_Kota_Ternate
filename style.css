@@ -7,6 +7,13 @@ body {
   padding: 0;
 }
 
+.logo {
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+  height: auto;
+}
+
 header {
   background-color: #333;
   color: #fff;
