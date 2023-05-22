@@ -110,7 +110,7 @@ footer {
 
 
 /* Media query untuk tampilan mobile */
-@media (max-width: 700px) {
+@media (max-width: 320px) {
   header {
     padding: 10px;
   }
@@ -123,13 +123,6 @@ footer {
 
   h1 {
     font-size: 20px;
-  }
-  /* CSS untuk elemen navigasi */
-nav {
-  background-color: #a9cde7;
-  padding: 8px 8px;
-  margin-right: 10px;
-  border-radius: 5px;
   }
   nav ul li a {
     padding: 10px;
