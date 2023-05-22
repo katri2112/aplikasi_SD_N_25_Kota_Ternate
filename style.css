@@ -124,7 +124,11 @@ footer {
   h1 {
     font-size: 20px;
   }
-
+  /* CSS untuk elemen navigasi */
+nav {
+  background-color: #a9cde7;
+  border-radius: 5px;
+  }
   nav ul li a {
     padding: 10px;
   }
