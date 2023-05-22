@@ -112,7 +112,7 @@ footer {
 /* Media query untuk tampilan mobile */
 @media (max-width: 700px) {
   header {
-    padding: 20px;
+    padding: 10px;
   }
 
   .logo {
@@ -126,7 +126,7 @@ footer {
   }
 
   nav ul li a {
-    padding: 5px;
+    padding: 10px;
   }
 
   h2 {
