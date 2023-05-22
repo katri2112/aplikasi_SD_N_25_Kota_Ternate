@@ -1,98 +1,154 @@
-// File: script.js
-
-// Data pengumuman
-const announcements = [
-  {
-    title: "Pengumuman 1",
-    content: "Ini adalah pengumuman pertama."
-  },
-  {
-    title: "Pengumuman 2",
-    content: "Ini adalah pengumuman kedua."
-  },
-  {
-    title: "Pengumuman 3",
-    content: "Ini adalah pengumuman ketiga."
-  }
+// Data jadwal pelajaran atas
+const schedulesAtas = [
+  { day: "Senin", subject: "Matematika", time: "08:00 - 09:30" },
+  { day: "Selasa", subject: "Bahasa Inggris", time: "09:45 - 11:15" },
+  { day: "Rabu", subject: "IPA", time: "13:00 - 14:30" },
+  { day: "Kamis", subject: "IPS", time: "14:45 - 16:15" },
+  { day: "Jumat", subject: "Olahraga", time: "08:00 - 09:30" },
+  { day: "Sabtu", subject: "Seni Budaya", time: "09:45 - 11:15" }
 ];
 
-// Data jadwal pelajaran
-const schedule = [
-  {
-    day: "Senin",
-    subject: "Matematika",
-    time: "08:00 - 09:30"
-  },
-  {
-    day: "Selasa",
-    subject: "Bahasa Inggris",
-    time: "10:00 - 11:30"
-  },
-  {
-    day: "Rabu",
-    subject: "IPA",
-    time: "13:00 - 14:30"
-  }
+// Data jadwal pelajaran bawah
+const schedulesBawah = [
+  { day: "Senin", subject: "Bahasa Indonesia", time: "09:30 - 11:00" },
+  { day: "Selasa", subject: "Pendidikan Agama", time: "11:30 - 13:00" },
+  { day: "Rabu", subject: "Olahraga", time: "14:30 - 16:00" },
+  { day: "Kamis", subject: "Seni Rupa", time: "16:30 - 18:00" },
+  { day: "Jumat", subject: "IPS", time: "10:30 - 12:00" },
+  { day: "Sabtu", subject: "Penjaskes", time: "12:30 - 14:00" }
 ];
 
-// Data kontak
-const contacts = [
-  {
-    name: "John Doe",
-    email: "johndoe@example.com",
-    phone: "1234567890"
-  },
-  {
-    name: "Jane Smith",
-    email: "janesmith@example.com",
-    phone: "0987654321"
-  }
-];
+let isTableAtasVisible = true; // Menyimpan status tabel atas terlihat atau tersembunyi
+let isTableBawahVisible = true; // Menyimpan status tabel bawah terlihat atau tersembunyi
 
-// Fungsi untuk menampilkan pengumuman terbaru
-function showLatestAnnouncement() {
-  const latestAnnouncement = announcements[0];
-  alert(latestAnnouncement.title + "\n\n" + latestAnnouncement.content);
-}
+// Fungsi untuk memuat jadwal atas
+function getScheduleAtas() {
+  const tableAtas = document.getElementById("jadwal-table-atas");
 
-// Fungsi untuk memuat jadwal pelajaran
-function getSchedule() {
-  const table = document.getElementById("jadwal-table");
-
-  // Menghapus data jadwal yang sudah ada sebelumnya
-  while (table.rows.length > 1) {
-    table.deleteRow(1);
+  // Menghapus data jadwal sebelumnya
+  while (tableAtas.rows.length > 1) {
+    tableAtas.deleteRow(1);
   }
 
-  // Memuat data jadwal baru
-  for (let i = 0; i < schedule.length; i++) {
-    const row = table.insertRow();
+  // Memasukkan data jadwal baru
+  for (let i = 0; i < schedulesAtas.length; i++) {
+    const schedule = schedulesAtas[i];
+    const row = tableAtas.insertRow();
     const dayCell = row.insertCell();
     const subjectCell = row.insertCell();
     const timeCell = row.insertCell();
 
-    dayCell.textContent = schedule[i].day;
-    subjectCell.textContent = schedule[i].subject;
-    timeCell.textContent = schedule[i].time;
+    dayCell.textContent = schedule.day;
+    subjectCell.textContent = schedule.subject;
+    timeCell.textContent = schedule.time;
+  }
+
+  isTableAtasVisible = true;
+  toggleTableAtasButton();
+}
+
+// Fungsi untuk menghapus jadwal atas
+function clearScheduleAtas() {
+  const tableAtas = document.getElementById("jadwal-table-atas");
+
+  // Menghapus data jadwal
+  while (tableAtas.rows.length > 1) {
+    tableAtas.deleteRow(1);
+  }
+
+  isTableAtasVisible = false;
+  toggleTableAtasButton();
+}
+
+// Fungsi untuk menampilkan atau menyembunyikan tabel atas
+function toggleTableAtas() {
+  const tableAtas = document.getElementById("jadwal-table-atas");
+  const toggleButton = document.getElementById("toggle-button-atas");
+
+  if (isTableAtasVisible) {
+    tableAtas.style.display = "none";
+    toggleButton.textContent = "Tampilkan Tabel Atas";
+  } else {
+    tableAtas.style.display = "table";
+    toggleButton.textContent = "Sembunyikan Tabel Atas";
+  }
+
+  isTableAtasVisible = !isTableAtasVisible;
+}
+
+// Fungsi untuk mengubah teks tombol toggle tabel atas sesuai dengan status tabel
+function toggleTableAtasButton() {
+  const toggleButton = document.getElementById("toggle-button-atas");
+
+  if (isTableAtasVisible) {
+    toggleButton.textContent = "Sembunyikan Tabel Atas";
+  } else {
+    toggleButton.textContent = "Tampilkan Tabel Atas";
   }
 }
 
-// Fungsi untuk menampilkan kontak
-function showContact() {
-  const contactList = document.getElementById("contact-list");
+// Fungsi untuk memuat jadwal bawah
+function getScheduleBawah() {
+  const tableBawah = document.getElementById("jadwal-table-bawah");
 
-  // Menghapus data kontak yang sudah ada sebelumnya
-  while (contactList.firstChild) {
-    contactList.removeChild(contactList.firstChild);
+  // Menghapus data jadwal sebelumnya
+  while (tableBawah.rows.length > 1) {
+    tableBawah.deleteRow(1);
   }
 
-  // Menambahkan data kontak baru
-  for (let i = 0; i < contacts.length; i++) {
-    const contactItem = document.createElement("li");
-    const contactInfo = document.createElement("div");
+  // Memasukkan data jadwal baru
+  for (let i = 0; i < schedulesBawah.length; i++) {
+    const schedule = schedulesBawah[i];
+    const row = tableBawah.insertRow();
+    const dayCell = row.insertCell();
+    const subjectCell = row.insertCell();
+    const timeCell = row.insertCell();
 
-    contactInfo.innerHTML = `<strong>${contacts[i].name}</strong><br>Email: ${contacts[i].email}<br>Phone: ${contacts[i].phone}`;
-    contactItem.appendChild(contactInfo);
-    contactList.appendChild(contactItem);
+    dayCell.textContent = schedule.day;
+    subjectCell.textContent = schedule.subject;
+    timeCell.textContent = schedule.time;
+  }
+
+  isTableBawahVisible = true;
+  toggleTableBawahButton();
+}
+
+// Fungsi untuk menghapus jadwal bawah
+function clearScheduleBawah() {
+  const tableBawah = document.getElementById("jadwal-table-bawah");
+
+  // Menghapus data jadwal
+  while (tableBawah.rows.length > 1) {
+    tableBawah.deleteRow(1);
+  }
+
+  isTableBawahVisible = false;
+  toggleTableBawahButton();
+}
+
+// Fungsi untuk menampilkan atau menyembunyikan tabel bawah
+function toggleTableBawah() {
+  const tableBawah = document.getElementById("jadwal-table-bawah");
+  const toggleButton = document.getElementById("toggle-button-bawah");
+
+  if (isTableBawahVisible) {
+    tableBawah.style.display = "none";
+    toggleButton.textContent = "Tampilkan Tabel Bawah";
+  } else {
+    tableBawah.style.display = "table";
+    toggleButton.textContent = "Sembunyikan Tabel Bawah";
+  }
+
+  isTableBawahVisible = !isTableBawahVisible;
+}
+
+// Fungsi untuk mengubah teks tombol toggle tabel bawah sesuai dengan status tabel
+function toggleTableBawahButton() {
+  const toggleButton = document.getElementById("toggle-button-bawah");
+
+  if (isTableBawahVisible) {
+    toggleButton.textContent = "Sembunyikan Tabel Bawah";
+  } else {
+    toggleButton.textContent = "Tampilkan Tabel Bawah";
   }
 }
