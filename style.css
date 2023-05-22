@@ -116,16 +116,17 @@ footer {
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-right: 5px;
   }
 
   h1 {
     font-size: 20px;
   }
+
   nav ul li a {
-    padding: 10px;
+    padding: 5px;
   }
 
   h2 {
@@ -133,7 +134,7 @@ footer {
   }
 
   button {
-    padding: 8px 8px;
+    padding: 8px 16px;
     margin-right: 5px;
   }
 
