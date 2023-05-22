@@ -3,23 +3,33 @@ header {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: none;
+}
+
+/* CSS untuk elemen body */
+body {
+  background-image: url("image3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   margin-right: 10px;
 }
 
 h1 {
   font-size: 24px;
   font-weight: bold;
+  color: #fff; /* menambahkan warna teks putih */
 }
 
 /* CSS untuk elemen navigasi */
 nav {
-  background-color: #333;
+  background-color: #a9cde7;
+  border-radius: 5px;
 }
 
 nav ul {
@@ -36,12 +46,13 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: #fff
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #333;
+  border-radius: 5px;
 }
 
 /* CSS untuk elemen section */
@@ -52,6 +63,7 @@ section {
 h2 {
   font-size: 20px;
   font-weight: bold;
+  color: #333;
 }
 
 /* CSS untuk tabel jadwal */
@@ -68,7 +80,7 @@ table td {
 }
 
 table th {
-  background-color: #333;
+  background-color: none;
   color: #fff;
 }
 
@@ -76,10 +88,11 @@ table th {
 button {
   padding: 10px 20px;
   margin-right: 10px;
-  background-color: #333;
+  background-color: #a9cde7;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 5px; /* menambahkan border-radius dengan nilai 5px */
 }
 
 button:hover {
@@ -88,8 +101,9 @@ button:hover {
 
 /* CSS untuk footer */
 footer {
-  background-color: #f2f2f2;
+  background-color: none;
   padding: 20px;
   text-align: center;
   font-size: 12px;
+  color: #fff; /* menambahkan warna teks putih */
 }
