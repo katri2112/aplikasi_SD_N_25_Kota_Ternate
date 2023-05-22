@@ -127,6 +127,7 @@ footer {
   /* CSS untuk elemen navigasi */
 nav {
   background-color: #a9cde7;
+  padding: 8px 8px;
   border-radius: 5px;
   }
   nav ul li a {
