@@ -57,7 +57,7 @@ nav ul li a:hover {
 
 /* CSS untuk elemen section */
 section {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 h2 {
@@ -66,10 +66,47 @@ h2 {
   color: #333;
 }
 
+container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* CSS untuk blok latar belakang */
+background-block {
+  background-color: #a9cde7; /* Latar belakang biru cerah (#a9cde7) */
+  padding: 20px; /* Tambahkan padding sesuai kebutuhan */
+}
+
+background-block b {
+  margin: 0; /* Menghilangkan margin pada teks di dalam blok */
+  color: #fff; /* Warna teks putih */
+}
+
+/* Gaya untuk link */
+a {
+  color: #4285f4; /* Warna biru cerah */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  
+}
 /* CSS untuk tabel jadwal */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 10px;
+  background-color: #f2f2f2; /* Menambahkan latar belakang abu-abu (#f2f2f2) */
+}
+
+td img {
+  width: 100%;
+  max-width: 200px; /* Ubah ukuran maksimum sesuai kebutuhan */
+  height: auto;
+  display: block;
   margin-bottom: 10px;
 }
 
