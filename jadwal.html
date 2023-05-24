@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aplikasi Sekolah SD Negeri 25 Kota Ternate - Jadwal</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="image1.png" type="image1/png">
- <script>
+  <script>
     // Data jadwal pelajaran atas
     const schedulesAtas = [
       { day: "Senin", subject: "Matematika", time: "08:00 - 09:30" },
@@ -161,6 +160,7 @@
   </script>
 </head>
 <body>
+<link rel="stylesheet" href="style.css">
   <header>
     <img src="image1.png" alt="Logo" class="logo">
     <h1>SD Negeri 25 Kota Ternate</h1>
@@ -174,7 +174,7 @@
     </ul>
   </nav>
   <section id="container">
-    <h2>Halaman Jadwal</h2>
+    <h2>Halaman Jadwal Kelas V (Lima) </h2>
     <table id="jadwal-table-atas">
       <tr>
         <th>Hari</th>
@@ -183,12 +183,12 @@
       </tr>
       <!-- Data jadwal pelajaran akan ditampilkan menggunakan JavaScript -->
     </table>
-    <button onclick="getScheduleAtas()">Muat Jadwal Atas</button>
-    <button onclick="clearScheduleAtas()">Hapus Jadwal Atas</button>
-    <button onclick="toggleTableAtas()">Sembunyikan Tabel Atas</button>
+    <button onclick="getScheduleAtas()">Muat Jadwal</button>
+    <button onclick="clearScheduleAtas()">Sembunyikan Jadwal</button>
+    <button onclick="toggleTableAtas()">Hapus Tabel</button>
   </section>
   <section id="container">
-    <h2>Halaman Jadwal</h2>
+    <h2>Halaman Jadwal Kelas VI (Enam) </h2>
     <table id="jadwal-table-bawah">
       <tr>
         <th>Hari</th>
@@ -197,9 +197,9 @@
       </tr>
       <!-- Data jadwal pelajaran akan ditampilkan menggunakan JavaScript -->
     </table>
-    <button onclick="getScheduleBawah()">Muat Jadwal Bawah</button>
-    <button onclick="clearScheduleBawah()">Hapus Jadwal Bawah</button>
-    <button onclick="toggleTableBawah()">Sembunyikan Tabel Bawah</button>
+    <button onclick="getScheduleBawah()">Muat Jadwal</button>
+    <button onclick="clearScheduleBawah()">Sembunyikan Jadwal</button>
+    <button onclick="toggleTableBawah()">Hapus Tabel</button>
   </section>
   <footer>
     <p>&copy; 2023 Aplikasi Sekolah. All rights reserved.</p>
