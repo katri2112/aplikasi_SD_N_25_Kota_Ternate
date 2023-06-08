@@ -1,3 +1,5 @@
+/* style.css */
+
 /* CSS untuk elemen header */
 header {
   display: flex;
@@ -61,12 +63,17 @@ section {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
-  color: #333;
+  color: #000;
+}
+b {
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
 }
 
-container {
+#container {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -92,33 +99,38 @@ a {
 a:hover {
   text-decoration: underline;
 }
-  
-}
+
 /* CSS untuk tabel jadwal */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 10px;
-  background-color: #f2f2f2; /* Menambahkan latar belakang abu-abu (#f2f2f2) */
+  background-color: #555555b5; /* Menambahkan latar belakang abu-abu (#555555b5) */
 }
 
 td img {
   width: 100%;
-  max-width: 200px; /* Ubah ukuran maksimum sesuai kebutuhan */
+  max-width: 150px; /* Ubah ukuran maksimum sesuai kebutuhan */
   height: auto;
   display: block;
   margin-bottom: 10px;
+}
+kt {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
 }
 
 table th,
 table td {
   padding: 10px;
   text-align: left;
+  color: #fff;
 }
 
 table th {
   background-color: none;
-  color: #fff;
+  color: #000;
 }
 
 /* CSS untuk tombol */
