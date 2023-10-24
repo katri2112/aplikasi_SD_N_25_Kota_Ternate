@@ -5,12 +5,12 @@ header {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: none;
+  background-color: transparent; /* Ganti nilai background-color ke transparent untuk menghilangkan latar belakang */
 }
 
 /* CSS untuk elemen body */
 body {
-  background-image: url("image3.png");
+  background-color: #fff; /* Ganti background-color ke #fff (putih) */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -25,17 +25,18 @@ body {
 h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #fff; /* menambahkan warna teks putih */
+  color: #020000;
 }
 
 /* CSS untuk elemen navigasi */
 nav {
-  background-color: #a9cde7;
+  background-color: #1e7dc0;
   border-radius: 5px;
 }
 
 nav ul {
   display: flex;
+  justify-content: space-around;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -48,12 +49,12 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 10px;
-  color: #fff
+  color: #fff;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: #333;
+  background-color: #3989c1;
   border-radius: 5px;
 }
 
@@ -67,37 +68,29 @@ h2 {
   font-weight: bold;
   color: #000;
 }
+
 b {
-	font-size: 15px;
-	font-weight: bold;
-	color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000f3;
 }
 
+
 #container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1000px;
+  margin: 25px 20px;
+  padding: 25px;
 }
 
 /* CSS untuk blok latar belakang */
-background-block {
-  background-color: #a9cde7; /* Latar belakang biru cerah (#a9cde7) */
-  padding: 20px; /* Tambahkan padding sesuai kebutuhan */
+.background-block {
+  background-color: #a9cde7;
+  padding: 20px;
 }
 
-background-block b {
-  margin: 0; /* Menghilangkan margin pada teks di dalam blok */
-  color: #fff; /* Warna teks putih */
-}
-
-/* Gaya untuk link */
-a {
-  color: #4285f4; /* Warna biru cerah */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.background-block b {
+  margin: 0;
+  color: #070505;
 }
 
 /* CSS untuk tabel jadwal */
@@ -105,20 +98,77 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 10px;
-  background-color: #555555b5; /* Menambahkan latar belakang abu-abu (#555555b5) */
+  background-color: #555555b5;
 }
 
-td img {
+.images {
+  display: flex;
   width: 100%;
-  max-width: 150px; /* Ubah ukuran maksimum sesuai kebutuhan */
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
+  transition: 2s;
 }
+
+.images img {
+  width: 100%;
+}
+
+.wrapper {
+  width: 400px;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#slide-1:target ~ .images {
+  margin-left: 0%;
+}
+
+#slide-2:target ~ .images {
+  margin-left: -100%;
+}
+
+#slide-3:target ~ .images {
+  margin-left: -200%;
+}
+
+#slide-4:target ~ .images {
+  margin-left: -300%;
+}
+
+.navigasi a {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: #dedede;
+  font-size: 0;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.navigasi a:hover {
+  background-color: #666;
+  transition: 1s;
+}
+
+.navigasi {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
 kt {
-	font-size: 20px;
-	font-weight: bold;
-	color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
 }
 
 table th,
@@ -141,7 +191,7 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 5px; /* menambahkan border-radius dengan nilai 5px */
+  border-radius: 5px;
 }
 
 button:hover {
@@ -150,18 +200,17 @@ button:hover {
 
 /* CSS untuk footer */
 footer {
-  background-color: none;
+  background-color: transparent; /* Ganti background-color ke transparent */
   padding: 20px;
   text-align: center;
   font-size: 12px;
-  color: #fff; /* menambahkan warna teks putih */
+  color: #fff;
 }
-
 
 /* Media query untuk tampilan mobile */
 @media (max-width: 320px) {
   header {
-    padding: 10px;
+    padding: 100px;
   }
 
   .logo {
